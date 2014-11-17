@@ -1,11 +1,18 @@
-Sign in with Facebook
-
+<ul>
 <% if @posts.any? %>
   <% @posts.each do |post| %>
-    <%= post.username %>
+  <li>
+    <%= post.user %>
     <%= post.caption %>
     <%= post.created_at %>
+    <%= link_to "view", post_path(post) %>
+    <%= link_to "edit", edit_post_path(post) %>
+    <%= link_to "delete", post_path(post), method: :delete %>
+  </li>
   <% end %>
 <% else %>
-  No posts have been submitted yet!
+  <li>No posts have been submitted yet!
 <% end %>
+</ul>
+
+<%= link_to "Submit post", new_post_path %>
