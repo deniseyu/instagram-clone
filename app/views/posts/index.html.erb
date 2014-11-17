@@ -1,1 +1,11 @@
 Sign in with Facebook
+
+<% if @posts.any? %>
+  <% @posts.each do |post| %>
+    <%= post.username %>
+    <%= post.caption %>
+    <%= post.created_at %>
+  <% end %>
+<% else %>
+  No posts have been submitted yet!
+<% end %>

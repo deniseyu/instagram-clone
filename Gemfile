@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'figaro'
 gem 'devise'
 gem 'cancan'
+gem 'omniauth-facebook'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
