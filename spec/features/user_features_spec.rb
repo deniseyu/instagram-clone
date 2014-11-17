@@ -63,6 +63,14 @@ describe 'user management' do
       expect(page).not_to have_content('meow')
     end
 
+    it 'can like a post, which increases the likes count', js: true do 
+      visit '/'
+      submit_post
+      expect(page).to have_content '0 like(s)'
+      click_link 'like'
+      expect(page).to have_content '1 like(s)'
+    end
+
   end
 
 end
