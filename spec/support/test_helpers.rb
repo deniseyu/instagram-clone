@@ -3,6 +3,7 @@ module TestHelper
   def sign_up
     visit '/posts'
     click_link 'Sign up'
+    fill_in('Username', with: 'deniseyu')
     fill_in('Email', with: 'denise@test.com')
     fill_in('Password', with: 'testtest')
     fill_in('Password confirmation', with: 'testtest')

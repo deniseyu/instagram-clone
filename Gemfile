@@ -12,6 +12,8 @@ gem 'figaro'
 gem 'devise'
 gem 'cancan'
 gem 'omniauth-facebook'
+gem 'aws-sdk'
+gem 'paperclip'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 

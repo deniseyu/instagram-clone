@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
 
   has_many :posts
+  has_many :likes
+  validates :username, uniqueness: true 
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -21,10 +23,6 @@ class User < ActiveRecord::Base
         user.email = data["email"] if user.email.blank?
       end
     end 
-  end
-
-  def self.username
-    user.email.to_s.split('@')[0]
   end
 
 end

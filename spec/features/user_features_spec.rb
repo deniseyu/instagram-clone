@@ -14,11 +14,6 @@ describe 'user management' do
       expect(page).to have_link('Sign up') 
     end
 
-    it 'should see a link to sign in with Facebook' do 
-      visit '/'
-      expect(page).to have_link('Sign in with Facebook')
-    end
-
     it 'should not see a link to sign out' do 
       visit '/'
       expect(page).not_to have_link('Sign out')
@@ -69,6 +64,13 @@ describe 'user management' do
       expect(page).to have_content '0 like(s)'
       click_link 'like'
       expect(page).to have_content '1 like(s)'
+    end
+
+    it 'cannot like a post more than once', js: true do 
+      visit '/'
+      submit_post
+      click_link 'like'
+      expect(page).not_to have_content 'like'
     end
 
   end

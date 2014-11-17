@@ -2,7 +2,7 @@
 <% if @posts.any? %>
   <% @posts.each do |post| %>
   <li>
-    <%= post.user %>
+    <%= post.user.username %>
     <%= post.caption %>
     <%= post.created_at %>
     <%= link_to "view", post_path(post) %>
@@ -14,10 +14,9 @@
     <% if can? :destroy, post %>
     <%= link_to "delete", post_path(post), method: :delete %>
     <% end %>
-
-    <%= link_to "like", post_likes_path(post), class: 'likes-link' %>
+    
     <span class="likes_count"><%= post.likes.count %></span> like(s)
-
+    <%= link_to "like", post_likes_path(post), class: 'likes-link' %>
   </li>
   <% end %>
 <% else %>
@@ -25,4 +24,6 @@
 <% end %>
 </ul>
 
+<% if current_user %>
 <%= link_to "Submit post", new_post_path %>
+<% end %>
