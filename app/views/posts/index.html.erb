@@ -6,8 +6,15 @@
     <%= post.caption %>
     <%= post.created_at %>
     <%= link_to "view", post_path(post) %>
+
+    <% if can? :update, post %>
     <%= link_to "edit", edit_post_path(post) %>
+    <% end %>
+
+    <% if can? :destroy, post %>
     <%= link_to "delete", post_path(post), method: :delete %>
+    <% end %>
+
   </li>
   <% end %>
 <% else %>
