@@ -15,3 +15,9 @@ rails s
 Users can sign up and submit image content to the website. Images are remotely hosted by AWS S3. Front end built with HTML5, CSS3, ERB, and jQuery.
 
 Built in Rails 4 framework with PostgresQL database and test-driven with RSpec.
+
+Deployed on Heroku: http://instacat-app.herokuapp.com 
+
+Screenshot of front page:
+
+![alt tag](https://raw.github.com/deniseyu/instagram-clone/master/public/images/screenshot.png)
