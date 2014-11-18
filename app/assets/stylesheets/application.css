@@ -2,7 +2,8 @@
 
 body {
   font-family: 'Roboto Slab', serif;
-  background-color: #7F9CB2;
+  background: #7F9CB2 url('/images/cat-background.png') no-repeat fixed 95% 95%;
+  background-size: 300px;
   color: white;
   top: 0;
   padding-top: 0;
@@ -18,8 +19,7 @@ body a:hover {
 }
 
 main {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 10%;
   padding: 20px;
   width: 640px;
   border-radius: 30px;
