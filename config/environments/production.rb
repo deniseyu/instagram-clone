@@ -9,6 +9,8 @@ Rails.application.configure do
     }
   }
 
+  config.secret_key_base = ENV['SECRET_KEY_BASE']
+
   config.cache_classes = true
 
   config.eager_load = true
