@@ -1,4 +1,15 @@
-<p><%= @post.caption %></p>
-<p><%= @post.created_at %></p>
-<p><%= @post.user %></p>
+<section class='show-post'>
+<h1><%= @post.caption %></h1>
+
+    <section class='show-image-container'>
+      <article class='show-image-box'>
+<%= image_tag @post.image.url(:medium), class: 'image-body' %>
+      </article>
+    </section>
+
+
+<p>
+  posted by <%= @post.user.username %> on <%= @post.created_at.strftime("%d • %m • %Y") %>   ♥︎ <%= @post.likes.count %> likes
+</p>
+</section>
 

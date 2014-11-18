@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, :except => [:index, :show]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.reverse
   end
 
   def new 
@@ -14,6 +14,7 @@ class PostsController < ApplicationController
     @user = User.find(current_user)
     @post = @user.posts.new(post_params)
     if @post.save
+      flash[:notice] = 'Post successfully created'
       redirect_to posts_path
     else
       render 'new'
@@ -21,7 +22,7 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:caption)
+    params.require(:post).permit(:caption, :image)
   end
 
   def show
@@ -34,7 +35,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    @post.update(params[:post].permit(:caption))
+    @post.update(params[:post].permit(:caption, :image))
     flash[:notice] = 'Post successfully edited'
     redirect_to posts_path
   end

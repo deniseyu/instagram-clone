@@ -1,0 +1,15 @@
+body {
+  font-family: 'Roboto Slab', serif;
+  background-color: #7F9CB2;
+  color: white;
+  text-align: center;
+}
+
+body a {
+  text-decoration: none;
+  color: white;
+}
+
+body a:hover {
+  color: pink;
+}

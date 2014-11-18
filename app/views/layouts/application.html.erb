@@ -5,20 +5,44 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
   <% if user_signed_in? %>
-    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+  <span id='sign-out-button'>
+    <%= link_to "sign out", destroy_user_session_path, method: :delete %>
+  </span>
   <% else %>
-    <%= link_to "Sign in", new_user_session_path %>
-    <%= link_to "Sign up", new_user_registration_path %>
+  <span id='sign-in-button'>
+    <%= link_to "sign in", new_user_session_path %>
+  </span>
+  <span id='sign-up-button'>
+    <%= link_to "sign up", new_user_registration_path %>
+  </span>
   <% end %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
+  <% if current_user %>
+  <span id='submit-post-button'>
+    <%= link_to "submit post", new_post_path %>
+  </span>
+  <% end %>
+
+  <span id='notice-bar'>
+    <p class="notice"><%= notice %></p>
+  </span>
+  <span id='alert-bar'>
+    <p class="alert"><%= alert %></p>
+  </span>
+
+<span id='home-icon'>
+  <a href='/'>home</a>
+</span>
+
+<main>
 <%= yield %>
+</main>
 
 </body>
 </html>
