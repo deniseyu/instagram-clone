@@ -2,7 +2,7 @@ module TestHelper
   
   def sign_up
     visit '/posts'
-    click_link 'Sign up'
+    click_link 'sign up'
     fill_in('Username', with: 'deniseyu')
     fill_in('Email', with: 'denise@test.com')
     fill_in('Password', with: 'testtest')
@@ -12,7 +12,7 @@ module TestHelper
 
   def submit_post
     visit '/posts'
-    click_link 'Submit post'
+    click_link 'submit post'
     fill_in('Caption', with: 'meow')
     click_button('Create Post')
   end

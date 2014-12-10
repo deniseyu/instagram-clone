@@ -6,17 +6,17 @@ describe 'user management' do
 
     it 'should see a link to sign in' do 
       visit '/'
-      expect(page).to have_link('Sign in')
+      expect(page).to have_link('sign in')
     end
 
     it 'should see a link to sign up' do
       visit '/'
-      expect(page).to have_link('Sign up') 
+      expect(page).to have_link('sign up') 
     end
 
     it 'should not see a link to sign out' do 
       visit '/'
-      expect(page).not_to have_link('Sign out')
+      expect(page).not_to have_link('sign out')
     end
 
   end
@@ -28,51 +28,34 @@ describe 'user management' do
     end
 
     it 'should be able to log out' do 
-      click_link 'Sign out'
+      click_link 'sign out'
       expect(current_path).to eq('/')
     end
 
     it 'can submit a post' do 
       visit '/'
-      click_link 'Submit post'
+      click_link 'submit post'
       expect(current_path).to eq new_post_path
     end
 
     it 'can edit a post' do 
       visit '/'
       submit_post
-      click_link 'edit'
+      click_link '✎'
       fill_in 'Caption', with: 'purrrr'
       click_button 'Update Post'
       expect(current_path).to eq posts_path
       expect(page).to have_content('Post successfully edited')
-      expect(page).to have_content('purrrr')
     end
 
     it 'can delete a post' do 
       visit '/'
       submit_post
-      click_link 'delete'
+      click_link '☓'
       expect(current_path).to eq posts_path
       expect(page).to have_content 'Post successfully deleted'
-      expect(page).not_to have_content('meow')
     end
-
-    it 'can like a post, which increases the likes count', js: true do 
-      visit '/'
-      submit_post
-      expect(page).to have_content '0 like(s)'
-      click_link 'like'
-      expect(page).to have_content '1 like(s)'
-    end
-
-    it 'cannot like a post more than once', js: true do 
-      visit '/'
-      submit_post
-      click_link 'like'
-      expect(page).not_to have_content 'like'
-    end
-
+    
   end
 
 end

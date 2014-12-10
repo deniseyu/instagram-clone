@@ -1,37 +1,37 @@
 <main>
-<% if @posts.any? %>
-  <% @posts.each do |post| %>
-  <article class='post-body'>
-    <section class='text-container'>
-    <p><%= post.user.username %></p>
-    <p><%= post.created_at.strftime("%d • %m • %Y") %></p>
-    <span class='view-icon'><%= link_to "➭", post_path(post) %></span>
+  <% if @posts.any? %>
+    <% @posts.each do |post| %>
+    <article class='post-body'>
+      <section class='text-container'>
+      <p><%= post.user.username %></p>
+      <p><%= post.created_at.strftime("%d • %m • %Y") %></p>
+      <span class='view-icon'><%= link_to "➭", post_path(post) %></span>
 
-    <% if can? :update, post %>
-    <span class='edit-icon'><%= link_to "✎", edit_post_path(post) %></span>
-    <% end %>
+      <% if can? :update, post %>
+      <span class='edit-icon'><%= link_to "✎", edit_post_path(post) %></span>
+      <% end %>
 
-    <% if can? :destroy, post %>
-    <span class='destroy-icon'><%= link_to "☓", post_path(post), method: :delete %></span>
-    <% end %>
+      <% if can? :destroy, post %>
+      <span class='destroy-icon'><%= link_to "☓", post_path(post), method: :delete %></span>
+      <% end %>
+      
+      <footer class='likes-box'>
+        <%= link_to "♥︎", post_likes_path(post), class: 'likes-link' %>
+        <span class='likes_count'><%= post.likes.count %></span>
+      </footer>
+      </section>
+
+      <section class='image-container'>
+        <article class='image-box'>
+          <%= image_tag post.image.url(:large), class: 'image-body' %>
+        </article>
+      </section>
     
-    <footer class='likes-box'>
-      <%= link_to "♥︎", post_likes_path(post), class: 'likes-link' %>
-      <span class='likes_count'><%= post.likes.count %></span>
-    </footer>
+    <% end %>
+  <% else %>
+    <section class='no-posts'>
+      <p>No posts have been submitted yet!</p>
     </section>
-
-    <section class='image-container'>
-      <article class='image-box'>
-        <%= image_tag post.image.url(:medium), class: 'image-body' %>
-      </article>
-    </section>
-  
   <% end %>
-<% else %>
-  <section class='no-posts'>
-    <p>No posts have been submitted yet!</p>
-  </section>
-<% end %>
 
 </main>

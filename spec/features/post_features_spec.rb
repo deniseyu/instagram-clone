@@ -14,13 +14,20 @@ describe 'post management' do
   context 'when at least one post has been submitted' do 
 
     before do 
-      Post.create(caption: 'I love cats')
+      @denise = User.create(username: 'deniseyu', email: 'denise@test.com', password: 'testtest', password_confirmation: 'testtest')
+      Post.create(caption: 'I love cats', user: @denise)
     end
 
     it 'front page should contain posts' do 
       visit '/'
       expect(page).not_to have_content('No posts have been submitted yet!')
-      expect(page).to have_content('I love cats')
+    end
+
+    it 'anyone can like a post, which increases the likes count', js: true do 
+      visit '/'
+      expect(page).to have_content '♥︎ 0'
+      find('.likes-link').trigger('click')
+      expect(page).to have_content '♥︎ 1'
     end
 
   end
@@ -30,24 +37,23 @@ describe 'post management' do
     before do 
       visit '/'
       sign_up
-      @cats = Post.create(caption: 'meow')
     end
 
     it 'a user can submit a new post' do 
-      click_link 'Submit post'
+      click_link 'submit post'
       fill_in 'Caption', with: 'Cats are great'
       click_button('Create Post')
       expect(current_path).to eq posts_path
-      expect(page).to have_content 'Cats are great'
+      expect(page).to have_content 'deniseyu'
     end
 
     it 'a user can view a post' do 
-      visit '/'
-      click_link 'view'
-      expect(current_path).to eq "/posts/#{@cats.id}"
+      submit_post
+      click_link '➭', match: :first
       expect(page).to have_content 'meow'
     end
 
   end
+
 
 end

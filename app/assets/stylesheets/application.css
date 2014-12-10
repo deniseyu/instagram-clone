@@ -2,9 +2,9 @@
 
 body {
   font-family: 'Roboto Slab', serif;
-  background: #7F9CB2 url('/images/cat-background.png') no-repeat fixed 95% 95%;
+  background: url('/images/cat-background.png') no-repeat fixed 95% 95%;
   background-size: 300px;
-  color: white;
+  color: #4683E0;
   top: 0;
   padding-top: 0;
 }
@@ -26,7 +26,7 @@ main {
 }
 
 main a {
-  color: white;
+  color: #4683E0;
 }
 
 section.no-posts {

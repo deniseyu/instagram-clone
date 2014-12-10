@@ -15,6 +15,7 @@ gem 'omniauth-facebook'
 gem 'aws-sdk'
 gem 'paperclip'
 gem 'rails_12factor'
+
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :test, :development do 
@@ -23,5 +24,6 @@ group :test, :development do
   gem 'capybara'
   gem 'poltergeist'
   gem 'database_cleaner'
+  gem "codeclimate-test-reporter", require: nil
 end
 
