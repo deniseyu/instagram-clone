@@ -1,9 +1,17 @@
-Makers Academy Week 9 Challenge
+# Makers Academy Week 9 Challenge
 ==
 
-Instagram Clone in Rails
+## Instagram Clone in Rails
 
-To run: 
+Instacat allows users to post images with captions to a public feed, where other users can 'like' them. User can only edit and delete their own posts. Photos of cute kittens and puppies are encouraged but not required.
+
+Deployed on Heroku: http://instacat-app.herokuapp.com 
+
+Screenshot of front page:
+
+![alt tag](https://raw.github.com/deniseyu/instagram-clone/master/public/images/screenshot.png)
+
+### To run: 
 
 ```
 git clone git@github.com:deniseyu/instagram-clone.git
@@ -12,12 +20,24 @@ bundle install
 rails s
 ```
 
-Users can sign up and submit image content to the website. Images are remotely hosted by AWS S3. Front end built with HTML5, CSS3, ERB, and jQuery.
+## Technologies
 
-Built in Rails 4 framework with PostgresQL database and test-driven with RSpec.
+* Rails 4
+* Ruby
+* PostgresQL
+* ActiveRecord
+* Amazon Web Services S3
+* HTML5
+* CSS3
+* Embedded Ruby
+* jQuery
+* Paperclip
+* ImageMagick
+* Devise
+* CanCan
+* Figaro
+* Git/Heroku
+* RSpec
+* Poltergeist
+* Capybara
 
-Deployed on Heroku: http://instacat-app.herokuapp.com 
-
-Screenshot of front page:
-
-![alt tag](https://raw.github.com/deniseyu/instagram-clone/master/public/images/screenshot.png)
