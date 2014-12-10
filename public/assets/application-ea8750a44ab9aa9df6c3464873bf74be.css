@@ -1,0 +1,164 @@
+/* overall elements */
+
+
+body {
+  font-family: 'Roboto Slab', serif;
+  background: url('/images/cat-background.png') no-repeat fixed 95% 95%;
+  background-size: 300px;
+  color: #4683E0;
+  top: 0;
+  padding-top: 0;
+}
+
+body a {
+  text-decoration: none;
+  color: white;
+}
+
+body a:hover {
+  color: pink;
+}
+
+main {
+  margin-left: 10%;
+  padding: 20px;
+  width: 640px;
+  border-radius: 30px;
+}
+
+main a {
+  color: #4683E0;
+}
+
+section.no-posts {
+  position: fixed;
+  top: 40px;
+  left: 400px;
+}
+
+/* navigation tabs */
+
+#sign-out-button, #submit-post-button, #sign-in-button, #sign-up-button, #home-icon {
+  color: black;
+  background-color: #1E2B4A;
+  width: 110px;
+  height: 25px;
+  padding: 4px;
+  padding-right: 10px;
+  text-align: right;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#sign-out-button {
+  position: fixed;
+  left: 0;
+  top: 100px;
+}
+
+#submit-post-button {
+  position: fixed;
+  left: 0;
+  top: 60px;
+}
+
+#sign-in-button {
+  position: fixed;
+  left: 0;
+  top: 60px;
+}
+
+#sign-up-button {
+  position: fixed;
+  left: 0;
+  top: 100px;
+}
+
+#home-icon {
+  position: fixed;
+  left: 0;
+  top: 20px;
+}
+
+/* notice boxes */
+
+#notice-bar {
+  position: absolute;
+  top: 20px;
+  left: 400px;
+}
+
+#alert-bar {
+  position: absolute;
+  top: 20px;
+  left: 400px;
+}
+
+/* post elements on index */
+
+article.post-body {
+  text-align: center;
+  width: 600px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+section.text-container {
+  display: inline-block;
+  width: 100px;
+  vertical-align: top;
+  margin-top: 50px;
+  margin-right: 30px;
+}
+
+section.image-container {
+  display: inline-block;
+  width: 460px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: #F2F1EF;
+  box-shadow: 5px 5px 5px black;
+}
+
+.destroy-icon, .edit-icon, .view-icon {
+  font-size: 2em;
+}
+
+.image-body {
+  width: 420px;
+}
+
+.view-icon {
+  font-size: 2em;
+}
+
+footer.likes-box {
+  position: relative;
+  text-align: center;
+}
+
+.likes-link {
+  font-size: 1.75em;
+  display: inline-block;
+  color: red;
+  z-index: 1000;
+}
+
+.likes_count {
+  display: inline-block;
+  top: 0px;
+}
+
+/* show page for post */
+
+.show-post {
+  padding: 10px;
+}
+
+.show-image-container {
+  text-align: center;
+  width: 450px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: #F2F1EF;
+  box-shadow: 5px 5px 5px black;
+}
