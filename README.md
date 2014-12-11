@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/deniseyu/instagram-clone/badges/gpa.svg)](https://codeclimate.com/github/deniseyu/instagram-clone)
+
 # Makers Academy Week 9 Challenge
 
 ## Instagram Clone in Rails
