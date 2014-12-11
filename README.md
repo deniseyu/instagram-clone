@@ -1,4 +1,4 @@
-[![Code Climate](https://codeclimate.com/github/deniseyu/instagram-clone/badges/gpa.svg)](https://codeclimate.com/github/deniseyu/instagram-clone)  [![Code Climate](https://codeclimate.com/github/deniseyu/instagram-clone/badges/gpa.svg)](https://codeclimate.com/github/deniseyu/instagram-clone)
+[![Code Climate](https://codeclimate.com/github/deniseyu/instagram-clone/badges/gpa.svg)](https://codeclimate.com/github/deniseyu/instagram-clone)  [![Test Coverage](https://codeclimate.com/github/deniseyu/instagram-clone/badges/coverage.svg)](https://codeclimate.com/github/deniseyu/instagram-clone)
 
 # Makers Academy Week 9 Challenge
 
