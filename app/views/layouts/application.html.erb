@@ -13,19 +13,15 @@
   <span id='sign-out-button'>
     <%= link_to "sign out", destroy_user_session_path, method: :delete %>
   </span>
+  <span id='submit-post-button'>
+    <%= link_to "submit post", new_post_path %>
+  </span>
   <% else %>
   <span id='sign-in-button'>
     <%= link_to "sign in", new_user_session_path %>
   </span>
   <span id='sign-up-button'>
     <%= link_to "sign up", new_user_registration_path %>
-  </span>
-  <% end %>
-
-
-  <% if current_user %>
-  <span id='submit-post-button'>
-    <%= link_to "submit post", new_post_path %>
   </span>
   <% end %>
 

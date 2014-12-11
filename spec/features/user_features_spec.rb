@@ -55,7 +55,7 @@ describe 'user management' do
       expect(current_path).to eq posts_path
       expect(page).to have_content 'Post successfully deleted'
     end
-    
+
   end
 
 end
