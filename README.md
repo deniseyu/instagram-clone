@@ -1,4 +1,4 @@
-[![Code Climate](https://codeclimate.com/github/deniseyu/instagram-clone/badges/gpa.svg)](https://codeclimate.com/github/deniseyu/instagram-clone)
+[![Code Climate](https://codeclimate.com/github/deniseyu/instagram-clone/badges/gpa.svg)](https://codeclimate.com/github/deniseyu/instagram-clone)  [![Code Climate](https://codeclimate.com/github/deniseyu/instagram-clone/badges/gpa.svg)](https://codeclimate.com/github/deniseyu/instagram-clone)
 
 # Makers Academy Week 9 Challenge
 
@@ -41,4 +41,8 @@ rails s
 * RSpec
 * Poltergeist
 * Capybara
+
+## Test Coverage Notes
+
+Test coverage is incomplete because tests have not been written for controllers loaded by Devise gem.
 
